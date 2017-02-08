@@ -63,7 +63,10 @@ class PhotosController < ApplicationController
     i.caption = @newcaption
     i.source = @newsource
     i.save
-    redirect_to("http://localhost:3000/photos")
+
+    @showlink = "http://localhost:3000/photos/"+@photo_id.to_s
+
+    redirect_to(@showlink)
   end
 
 
